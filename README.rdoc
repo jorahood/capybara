@@ -293,13 +293,11 @@ Normally Capybara expects to be testing an in-process Rack application, but you 
 
     visit('/')
 
+If you set app_host, Capybara will not try to start a Rack server.
+
 Note that rack-test does not support running against a remote server. With drivers that support it, you can also visit any URL directly:
 
     visit('http://www.google.com')
-
-By default Capybara will try to boot a rack application automatically. You might want to switch off Capybara's rack server if you are running against a remote application:
-
-    Capybara.run_server = false
 
 == Using the sessions manually
 
